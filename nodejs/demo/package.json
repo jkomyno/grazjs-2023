@@ -1,0 +1,25 @@
+{
+  "name": "@jkomyno/node-congress-2023-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Demo usage of WebAssembly in Node.js + TypeScript",
+  "author": "Alberto Schiabel (@jkomyno)",
+  "keywords": [
+    "node",
+    "TypeScript",
+    "WebAssembly",
+    "Wasm"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "test:ci": "vitest typecheck --run && vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "18.14.1",
+    "ts-node": "10.9.1",
+    "typescript": "4.9.5",
+    "vitest": "0.28.5"
+  }
+}
