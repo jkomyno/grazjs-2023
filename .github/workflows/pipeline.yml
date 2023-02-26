@@ -45,7 +45,7 @@ jobs:
 
       - name: Lint
         run: |
-          cargo +nightly fmt --all -- --check
+          cargo fmt --all -- --check
           cargo clippy -- -D warnings
   
       - name: Install cargo check tools
