@@ -1,0 +1,4 @@
+[toolchain]
+channel = "1.66.1"
+components = [ "rustfmt", "clippy", "wasm-bindgen-cli@0.2.84" ]
+targets = [ "wasm32-unknown-unknown" ]
