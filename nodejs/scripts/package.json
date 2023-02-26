@@ -1,0 +1,19 @@
+{
+  "name": "@jkomyno/node-congress-2023-scripts",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Build scripts for WebAssembly",
+  "author": "Alberto Schiabel (@jkomyno)",
+  "keywords": [
+    "node",
+    "TypeScript",
+    "WebAssembly",
+    "Wasm"
+  ],
+  "main": "index.mjs",
+  "license": "MIT",
+  "scripts": {
+    "build:wasm": "node index.mjs"
+  }
+}
