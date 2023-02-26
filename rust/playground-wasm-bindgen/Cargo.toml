@@ -1,0 +1,19 @@
+[package]
+name = "playground-wasm-bindgen"
+version = "0.1.0"
+edition = "2021"
+authors = ["Alberto Schiabel <alberto.schiabel@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# build a C-style shared library that can be dynamically loaded by Node.js
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2.84" }
+
+[profile.release]
+lto = true          # enable link-time optimization
+strip = "debuginfo" # stip all custom sections besides function names
+opt-level = "s"     # optimize for size

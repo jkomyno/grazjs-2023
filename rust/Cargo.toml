@@ -1,3 +1,5 @@
 [workspace]
 
-members = []
+members = [
+  "playground-wasm-bindgen",
+]
