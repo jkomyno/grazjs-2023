@@ -84,6 +84,10 @@ describe('playground-serde-wasm-bindgen', () => {
       }
     })
 
+    test('BTreeMap<i32, i32> in Rust is Map<number, number> in TS', () => {
+      expect(wasm.object_keys_as_string(new Map([[1, 10], [5, 0]]))).toEqual('1, 5')
+    })
+
     describe('scalars', () => {
       const scalars = {
         n: 1,

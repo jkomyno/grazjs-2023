@@ -1,0 +1,32 @@
+/* tslint:disable */
+/* eslint-disable */
+export const memory: WebAssembly.Memory;
+export function inc_or_fail(a: number, b: number, c: number): void;
+export function enum_to_string(a: number, b: number): void;
+export function enum_from_string(a: number, b: number, c: number): void;
+export function either_to_string(a: number, b: number): void;
+export function either_from_ok(a: number): number;
+export function either_from_err(a: number, b: number): number;
+export function duplicate_bigint(a: number): number;
+export function duplicate_int(a: number): number;
+export function duplicate_f64(a: number): number;
+export function duplicate_f32(a: number): number;
+export function get_letter(a: number): number;
+export function get_key_length(a: number): number;
+export function get_keys(a: number): number;
+export function duplicate_biguint(a: number): number;
+export function duplicate_uint(a: number): number;
+export function maybe_inc(a: number, b: number, c: number): void;
+export function get_i32_array_length(a: number, b: number): number;
+export function get_nested_array_length(a: number): number;
+export function get_string_array_length(a: number): number;
+export function get_u32_array_length(a: number, b: number): number;
+export function object_keys_as_string(a: number, b: number): void;
+export function get_string_length(a: number, b: number): number;
+export function get_string_length_from_params(a: number): number;
+export function to_uppercase(a: number, b: number, c: number): void;
+export function __wbindgen_malloc(a: number): number;
+export function __wbindgen_realloc(a: number, b: number, c: number): number;
+export function __wbindgen_add_to_stack_pointer(a: number): number;
+export function __wbindgen_free(a: number, b: number): void;
+export function __wbindgen_exn_store(a: number): void;
