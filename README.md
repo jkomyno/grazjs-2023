@@ -51,17 +51,27 @@ In [`./rust`](./rust):
 
 ### Build & Test
 
-- Run Rust unit tests and build the WebAssembly artifacts:
+With Docker:
 
-  ```sh
-  pnpm build:wasm
-  ```
+  - Build and run the local Docker image:
 
-- Run Node.js unit tests:
+    ```sh
+    ./build.sh
+    ```
 
-  ```sh
-  pnpm test:ci
-  ```
+Without Docker:
+
+  - Run Rust unit tests and build the WebAssembly artifacts:
+
+    ```sh
+    pnpm build:wasm
+    ```
+
+  - Run Node.js unit tests:
+
+    ```sh
+    pnpm test:ci
+    ```
 
 ## 👤 Author
 
