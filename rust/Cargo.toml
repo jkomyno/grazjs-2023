@@ -3,4 +3,5 @@
 members = [
   "playground-wasm-bindgen",
   "playground-serde-wasm-bindgen",
+  "playground-wasm-tsify",
 ]

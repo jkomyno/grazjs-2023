@@ -141,7 +141,56 @@ pub fn id_vec_char(x: Vec<char>) -> Vec<char> {
   x
 }
 
+/// Given a wrapper over a Vec<char> vector, return itself.
+/// Fails with:
+///
+/// ```console
+/// error[E0277]: the trait bound `char: JsObject` is not satisfied
+///    --> playground-wasm-tsify/src/functions/unsupported.rs:167:1
+///     |
+/// 167 | #[wasm_bindgen]
+///     | ^^^^^^^^^^^^^^^ the trait `JsObject` is not implemented for `char`
+///     |
+///     = help: the following other types implement trait `JsObject`:
+///               js_sys::Array
+///               js_sys::ArrayBuffer
+///               js_sys::AsyncIterator
+///               js_sys::BigInt
+///               js_sys::BigInt64Array
+///               js_sys::BigUint64Array
+///               js_sys::Boolean
+///               js_sys::DataView
+///             and 54 others
+///     = note: required for `Box<[char]>` to implement `IntoWasmAbi`
+///     = note: this error originates in the attribute macro `wasm_bindgen`
+/// ```
+#[wasm_bindgen]
+pub fn id_vec_char(x: VecData<char>) -> Vec<char> {
+  x
+}
+
 /// Given a BTreeMap<i32, i32>, return its keys separated by a comma.
+/// Fails with:
+///
+/// ```console
+/// error[E0277]: the trait bound `BTreeMap<i32, i32>: FromWasmAbi` is not satisfied
+///    --> playground-wasm-tsify/src/functions/unsupported.rs:194:1
+///     |
+/// 194 | #[wasm_bindgen]
+///     | ^^^^^^^^^^^^^^^ the trait `FromWasmAbi` is not implemented for `BTreeMap<i32, i32>`
+///     |
+///     = help: the following other types implement trait `FromWasmAbi`:
+///               *const T
+///               *mut T
+///               Box<[JsValue]>
+///               Box<[T]>
+///               Box<[f32]>
+///               Box<[f64]>
+///               Box<[i16]>
+///               Box<[i32]>
+///             and 105 others
+///     = note: this error originates in the attribute macro `wasm_bindgen`
+/// ```
 #[wasm_bindgen]
 pub fn object_keys_as_string(x: std::collections::BTreeMap<i32, i32>) -> String {
   x.keys().map(|key| format!("{}", key)).collect::<Vec<String>>().join(", ")
