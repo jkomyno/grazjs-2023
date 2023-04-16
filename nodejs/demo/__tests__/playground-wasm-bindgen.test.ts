@@ -59,7 +59,14 @@ describe('playground-wasm-bindgen', () => {
       })
 
       test('to_uppercase', () => {
-        expect(wasm.to_uppercase('Node Congress')).toEqual('NODE CONGRESS')
+        expect(wasm.toUpperCase('Node Congress')).toEqual('NODE CONGRESS')
+      })
+
+      test('n_to_string', async () => {
+        expect(wasm.n_to_string(256n)).toEqual('256')
+
+        await expect(toPromise(() => wasm.n_to_string('a' as unknown as bigint)))
+          .rejects.toThrow('Cannot convert a to a BigInt')
       })
     })
 

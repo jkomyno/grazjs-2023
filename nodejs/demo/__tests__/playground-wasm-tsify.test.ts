@@ -54,6 +54,11 @@ describe('playground-wasm-bindgen', () => {
         expect(wasm.either_to_string({ _tag: 'err', value: 'empty' })).toEqual('Err(empty)')
       })
 
+      test('either_to_string_with_invalid_input', () => {
+        // @ts-expect-error
+        expect(() => wasm.either_to_string('ok')).toThrow('`unwrap_throw` failed')
+      })
+
       test('either_from_ok', () => {
         expect(wasm.either_from_ok(1)).toEqual({ _tag: 'ok', value: 1 })
       })
