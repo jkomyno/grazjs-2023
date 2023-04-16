@@ -1,7 +1,5 @@
 use crate::types::{scalars::Scalars, vec::VecData};
-use serde::{Deserialize, Serialize};
 use std::any::Any;
-use tsify::Tsify;
 use wasm_bindgen::prelude::wasm_bindgen;
 
 /// Given a `Scalars` instance, return its `letter` member.
