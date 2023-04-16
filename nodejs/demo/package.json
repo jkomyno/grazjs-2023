@@ -2,6 +2,7 @@
   "name": "@jkomyno/node-congress-2023-demo",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "Demo usage of WebAssembly in Node.js + TypeScript",
   "author": "Alberto Schiabel (@jkomyno)",
   "keywords": [
