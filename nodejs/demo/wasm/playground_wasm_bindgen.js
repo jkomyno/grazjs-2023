@@ -209,24 +209,6 @@ module.exports.enum_from_string = function(label) {
     }
 };
 
-/**
-* Given an `OptionalParams` instance, return its `int32` member incremented by 1, or None.
-* In TS, the Rust `char` is typed as `string`, and every character after the first one is truncated.
-* @param {number | undefined} x
-* @returns {number | undefined}
-*/
-module.exports.maybe_inc = function(x) {
-    try {
-        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-        wasm.maybe_inc(retptr, !isLikeNone(x), isLikeNone(x) ? 0 : x);
-        var r0 = getInt32Memory0()[retptr / 4 + 0];
-        var r1 = getInt32Memory0()[retptr / 4 + 1];
-        return r0 === 0 ? undefined : r1;
-    } finally {
-        wasm.__wbindgen_add_to_stack_pointer(16);
-    }
-};
-
 let cachedUint32Memory0 = null;
 
 function getUint32Memory0() {
@@ -266,6 +248,24 @@ module.exports.get_i32_array_length = function(x) {
     const len0 = WASM_VECTOR_LEN;
     const ret = wasm.get_i32_array_length(ptr0, len0);
     return ret >>> 0;
+};
+
+/**
+* Given an `OptionalParams` instance, return its `int32` member incremented by 1, or None.
+* In TS, the Rust `char` is typed as `string`, and every character after the first one is truncated.
+* @param {number | undefined} x
+* @returns {number | undefined}
+*/
+module.exports.maybe_inc = function(x) {
+    try {
+        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+        wasm.maybe_inc(retptr, !isLikeNone(x), isLikeNone(x) ? 0 : x);
+        var r0 = getInt32Memory0()[retptr / 4 + 0];
+        var r1 = getInt32Memory0()[retptr / 4 + 1];
+        return r0 === 0 ? undefined : r1;
+    } finally {
+        wasm.__wbindgen_add_to_stack_pointer(16);
+    }
 };
 
 function getArrayI32FromWasm0(ptr, len) {
@@ -446,12 +446,29 @@ module.exports.get_string_length_from_params = function(x) {
 * @param {string} x
 * @returns {string}
 */
-module.exports.to_uppercase = function(x) {
+module.exports.toUpperCase = function(x) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
         const ptr0 = passStringToWasm0(x, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
         const len0 = WASM_VECTOR_LEN;
-        wasm.to_uppercase(retptr, ptr0, len0);
+        wasm.toUpperCase(retptr, ptr0, len0);
+        var r0 = getInt32Memory0()[retptr / 4 + 0];
+        var r1 = getInt32Memory0()[retptr / 4 + 1];
+        return getStringFromWasm0(r0, r1);
+    } finally {
+        wasm.__wbindgen_add_to_stack_pointer(16);
+        wasm.__wbindgen_free(r0, r1);
+    }
+};
+
+/**
+* @param {bigint} n
+* @returns {string}
+*/
+module.exports.n_to_string = function(n) {
+    try {
+        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+        wasm.n_to_string(retptr, n);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
         var r1 = getInt32Memory0()[retptr / 4 + 1];
         return getStringFromWasm0(r0, r1);

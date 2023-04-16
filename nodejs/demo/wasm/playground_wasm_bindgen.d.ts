@@ -33,13 +33,6 @@ export function enum_to_string(provider: number): string;
 */
 export function enum_from_string(label: string): number;
 /**
-* Given an `OptionalParams` instance, return its `int32` member incremented by 1, or None.
-* In TS, the Rust `char` is typed as `string`, and every character after the first one is truncated.
-* @param {number | undefined} x
-* @returns {number | undefined}
-*/
-export function maybe_inc(x?: number): number | undefined;
-/**
 * Given a Vec<u32> vector, return its length.
 * In TS, the Rust `Vec<u32>` is typed as `Uint32Array`.
 * @param {Uint32Array} x
@@ -53,6 +46,13 @@ export function get_u32_array_length(x: Uint32Array): number;
 * @returns {number}
 */
 export function get_i32_array_length(x: Int32Array): number;
+/**
+* Given an `OptionalParams` instance, return its `int32` member incremented by 1, or None.
+* In TS, the Rust `char` is typed as `string`, and every character after the first one is truncated.
+* @param {number | undefined} x
+* @returns {number | undefined}
+*/
+export function maybe_inc(x?: number): number | undefined;
 /**
 * Given an unsigned 64-bit number, return the number multiplied by two.
 * In TS, the Rust `u64` is typed as `bigint`.
@@ -115,7 +115,12 @@ export function get_string_length_from_params(x: StringParams): number;
 * @param {string} x
 * @returns {string}
 */
-export function to_uppercase(x: string): string;
+export function toUpperCase(x: string): string;
+/**
+* @param {bigint} n
+* @returns {string}
+*/
+export function n_to_string(n: bigint): string;
 /**
 * Models a closed set of database providers as a C-style enum.
 * In TS, the Rust C-style `enum` is typed as `enum`.
