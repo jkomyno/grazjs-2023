@@ -4,7 +4,7 @@
 
 <p>
   <a href="https://github.com/jkomyno/node-congress-2023/actions/workflows/ci.yml">
-    <img alt="Github Actions" src="https://github.com/jkomyno/node-congress-2023/actions/workflows/pipeline.yml/badge.svg?branch=main" target="_blank" />
+    <img alt="Github Actions" src="https://github.com/jkomyno/node-congress-2023/actions/workflows/ci.yml/badge.svg?branch=main" target="_blank" />
   </a>
 
   <a href="https://github.com/jkomyno/node-congress-2023/blob/main/LICENSE">
