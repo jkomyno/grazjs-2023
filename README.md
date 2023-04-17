@@ -3,7 +3,7 @@
 > Accompanying code for the talk I presented at Node Congress 2023 in Berlin, Germany
 
 <p>
-  <a href="https://github.com/jkomyno/node-congress-2023/actions/workflows/ci.yaml">
+  <a href="https://github.com/jkomyno/node-congress-2023/actions/workflows/ci.yml">
     <img alt="Github Actions" src="https://github.com/jkomyno/node-congress-2023/actions/workflows/pipeline.yml/badge.svg?branch=main" target="_blank" />
   </a>
 
