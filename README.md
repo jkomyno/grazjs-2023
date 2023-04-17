@@ -3,9 +3,14 @@
 > Accompanying code for the talk I presented at Node Congress 2023 in Berlin, Germany
 
 <p>
+  <a href="https://github.com/jkomyno/node-congress-2023/actions/workflows/ci.yaml">
+    <img alt="Github Actions" src="https://github.com/jkomyno/node-congress-2023/actions/workflows/pipeline.yml/badge.svg?branch=main" target="_blank" />
+  </a>
+
   <a href="https://github.com/jkomyno/node-congress-2023/blob/main/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
+  
 </p>
 
 Slides for this talk are also available [here](http://jkomyno-nodecongress-2023.vercel.app/).
