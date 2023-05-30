@@ -1,19 +1,19 @@
 # Type-safe bindings for Node.js with Rust and WebAssembly
 
-> Accompanying code for the talk I presented at Node Congress 2023 in Berlin, Germany
+> Accompanying code for the talk I presented at the Graz.js meetup in Graz, Austria.
 
 <p>
-  <a href="https://github.com/jkomyno/node-congress-2023/actions/workflows/ci.yml">
-    <img alt="Github Actions" src="https://github.com/jkomyno/node-congress-2023/actions/workflows/ci.yml/badge.svg?branch=main" target="_blank" />
+  <a href="https://github.com/jkomyno/grazjs-2023/actions/workflows/ci.yml">
+    <img alt="Github Actions" src="https://github.com/jkomyno/grazjs-2023/actions/workflows/ci.yml/badge.svg?branch=main" target="_blank" />
   </a>
 
-  <a href="https://github.com/jkomyno/node-congress-2023/blob/main/LICENSE">
+  <a href="https://github.com/jkomyno/grazjs-2023/blob/main/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
   
 </p>
 
-Slides for this talk are also available [here](http://jkomyno-nodecongress-2023.vercel.app/).
+Slides for this talk are also available [here](http://jkomyno-grazjs-2023.vercel.app/).
 
 ## Abstract
 
@@ -86,7 +86,7 @@ The local [`playground-wasm-bindgen`](./rust/playground-wasm-bindgen/src/lib.rs)
 
 The [`functions::unsupported`](./rust/playground-wasm-bindgen/src/functions/unsupported.rs) module (respectively, the [`types::unsupported`](./rust/playground-wasm-bindgen/src/types/unsupported.rs) module) contains a set of functions (respectively, types) that are not supported by `wasm-bindgen` by default, with comments showing the compilation errors that are thrown when trying to export them.
 
-For instance, trying to compile the [following code](https://github.com/jkomyno/node-congress-2023/blob/4495d5315d19d321841b2f6aec47464f0a1e5951/rust/playground-wasm-bindgen/src/functions/unsupported.rs#L4-L30)
+For instance, trying to compile the [following code](https://github.com/jkomyno/grazjs-2023/blob/4495d5315d19d321841b2f6aec47464f0a1e5951/rust/playground-wasm-bindgen/src/functions/unsupported.rs#L4-L30)
 
 ```rust
 /// Given a Vec<Vec<i32>> vector, return its length.
@@ -155,4 +155,4 @@ Please consider starring, supporting, and contributing to the following projects
 ## 📝 License
 
 Built with ❤️ by [Alberto Schiabel](https://github.com/jkomyno).
-This project is [MIT](https://github.com/jkomyno/node-congress-2023/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/jkomyno/grazjs-2023/blob/main/LICENSE) licensed.

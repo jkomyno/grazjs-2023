@@ -7,14 +7,14 @@ docker buildx build \
   --build-context nodejs=./nodejs \
   -f Dockerfile \
   -o type=docker \
-  . -t jkomyno/node-congress-2023 \
+  . -t jkomyno/grazjs-2023 \
   --progress plain
 
 docker run \
   --platform="${DOCKER_PLATFORM}" \
   -v "$(pwd)/nodejs/demo":/opt/app/nodejs/demo \
-  jkomyno/node-congress-2023
+  jkomyno/grazjs-2023
 
 docker run \
   --platform="${DOCKER_PLATFORM}" \
-  jkomyno/node-congress-2023 "test:ci"
+  jkomyno/grazjs-2023 "test:ci"

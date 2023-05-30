@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@jkomyno/node-congress-2023",
+  "name": "@jkomyno/grazjs-2023",
   "engines": {
     "pnpm": ">=7"
   },
@@ -16,8 +16,8 @@
     "vitest": "^0.29.1"
   },
   "scripts": {
-    "build:wasm": "pnpm run --filter \"@jkomyno/node-congress-2023-scripts\" build:wasm",
-    "test": "pnpm run --filter \"@jkomyno/node-congress-2023-demo\" test",
-    "test:ci": "pnpm run --filter \"@jkomyno/node-congress-2023-demo\" test:ci"
+    "build:wasm": "pnpm run --filter \"@jkomyno/grazjs-2023-scripts\" build:wasm",
+    "test": "pnpm run --filter \"@jkomyno/grazjs-2023-demo\" test",
+    "test:ci": "pnpm run --filter \"@jkomyno/grazjs-2023-demo\" test:ci"
   }
 }

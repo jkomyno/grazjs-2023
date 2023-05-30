@@ -29,8 +29,7 @@ mod tests {
     let result = internal::get_string_length_from_params(StringParams { id: "".to_owned() });
     assert_eq!(result, 0);
 
-    let result =
-      internal::get_string_length_from_params(StringParams { id: "Node congress".to_owned() });
-    assert_eq!(result, 13);
+    let result = internal::get_string_length_from_params(StringParams { id: "Graz.js".to_owned() });
+    assert_eq!(result, 7);
   }
 }

@@ -37,8 +37,8 @@ mod tests {
     let result = get_string_length("".to_owned());
     assert_eq!(result, 0);
 
-    let result = get_string_length("Node congress".to_owned());
-    assert_eq!(result, 13);
+    let result = get_string_length("Graz.js".to_owned());
+    assert_eq!(result, 7);
   }
 
   #[test]
@@ -46,8 +46,8 @@ mod tests {
     let result = get_string_length_from_params(StringParams { id: "".to_owned() });
     assert_eq!(result, 0);
 
-    let result = get_string_length_from_params(StringParams { id: "Node congress".to_owned() });
-    assert_eq!(result, 13);
+    let result = get_string_length_from_params(StringParams { id: "Graz.js".to_owned() });
+    assert_eq!(result, 7);
   }
 
   #[test]
@@ -55,8 +55,8 @@ mod tests {
     let result = to_uppercase("".to_owned());
     assert_eq!(result, "".to_owned());
 
-    let result = to_uppercase("Node Congress".to_owned());
-    assert_eq!(result, "NODE CONGRESS".to_owned());
+    let result = to_uppercase("Graz.js".to_owned());
+    assert_eq!(result, "GRAZ.JS".to_owned());
   }
 
   #[test]

@@ -58,7 +58,7 @@ describe('playground-serde-wasm-bindgen', () => {
     describe('String (utf-8) in Rust is string (utf-16) in TS', () => {
       test('get_string_length_from_params', () => {
         expect(wasm.get_string_length_from_params({ id: '' })).toEqual(0)
-        expect(wasm.get_string_length_from_params({ id: 'Node Congress' })).toEqual(13)
+        expect(wasm.get_string_length_from_params({ id: 'Graz.js' })).toEqual(7)
   
         const stringWithEmoji = 'lol🚀'
         expect(wasm.get_string_length_from_params({ id: stringWithEmoji })).toEqual(7)

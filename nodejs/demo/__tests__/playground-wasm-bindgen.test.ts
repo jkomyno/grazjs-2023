@@ -51,7 +51,7 @@ describe('playground-wasm-bindgen', () => {
     describe('String (utf-8) in Rust is string (utf-16) in TS', () => {
       test('get_string_length', () => {
         expect(wasm.get_string_length('')).toEqual(0)
-        expect(wasm.get_string_length('Node Congress')).toEqual(13)
+        expect(wasm.get_string_length('Graz.js')).toEqual(7)
   
         const stringWithEmoji = 'lol🚀'
         expect(wasm.get_string_length(stringWithEmoji)).toEqual(7)
@@ -59,7 +59,7 @@ describe('playground-wasm-bindgen', () => {
       })
 
       test('to_uppercase', () => {
-        expect(wasm.toUpperCase('Node Congress')).toEqual('NODE CONGRESS')
+        expect(wasm.toUpperCase('Graz.js')).toEqual('GRAZ.JS')
       })
 
       test('n_to_string', async () => {
